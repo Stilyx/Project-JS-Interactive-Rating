@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background-color: #131518;
+}
+
+.container {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* two contents configuration */
+
+.rate-content,
+.rate-result {
+  width: 412px;
+  min-width: 327px;
+  height: 390px;
+  min-height: 360px;
+  padding: 32px;
+  background-image: radial-gradient(#232a34, #181e27);
+  border-radius: 30px;
+}
+
+.image-star {
+  background-color: #262e38;
+  padding: 12px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.title,
+.result-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 7px;
+  min-width: 279px;
+}
+
+.paragraph,
+.result-paragraph {
+  font-weight: 400;
+  min-width: 279px;
+  font-size: 15px;
+  color: lightgrey;
+  opacity: 75%;
+  margin-bottom: 25px;
+}
+
+.rate-values {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  min-width: 281px;
+}
+
+.rate-button {
+  text-align: center;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #262e38;
+  color: #7c8798;
+  margin-bottom: 32px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.rate-button.active {
+  background-color: orange;
+  color: white;
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  padding: 11px;
+  background-color: #fc7614;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 22px;
+  cursor: pointer;
+  min-width: 279px;
+}
+
+/* Rate Result */
+
+.rate-result {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.phone {
+  width: 162px;
+  height: 108px;
+  min-width: 144px;
+}
+
+.rate-star-result {
+  color: #fc7614;
+  background-color: #262e38;
+  padding: 4px;
+  border-radius: 22px;
+  font-weight: 400;
+  font-size: 15px;
+  width: 193px;
+  min-width: 168px;
+  margin: 32px auto;
+}
+
+.result-paragraph {
+  width: 340px;
+  height: 72px;
+}
+
+/* hover buttons and events */
+.rate-button.active:hover {
+  background-color: orange;
+}
+.rate-button:hover {
+  opacity: 75%;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: #fc7614;
+  transition: 0.5s;
+}
+.submit-button.error {
+  animation: shake 200ms;
+}
+@keyframes shake {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+.message-error {
+  text-align: center;
+  color: #4273af;
+  font-size: 17px;
+  margin: 5px;
+}
